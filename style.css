@@ -24,6 +24,18 @@ body {
   flex-direction: row;
 }
 
+.wrap {
+  flex-wrap: wrap;
+}
+
+.padding {
+  padding: 1rem;
+}
+
+.fullscreenheight {
+  height: 100vh;
+}
+
 .white {
   color: white;
 }
@@ -31,6 +43,20 @@ body {
 a {
   color: white;
   font-size: 2.5rem;
+}
+
+a:hover {
+  color: #b6cbd1;
+}
+
+.navigation {
+  top: 0;
+  position: sticky;
+  z-index: 1;
+}
+
+.navigation a {
+  font-size: 1rem;
 }
 
 .logo {
@@ -46,56 +72,49 @@ a {
 }
 
 .main-section {
-  background-image: url(https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+  background-image: url("./assets/hero.jpg");
   min-height: 100vh;
 }
 
 .selfie {
   object-fit: cover;
+  height: 100%;
+}
+
+.title {
+  font-size: 1.5em;
+  text-decoration: none;
 }
 
 .first-section {
   background-image: url(https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
-  min-height: 300px;
+  min-height: 50vh;
 }
 
 .second-section {
   background-image: url(https://images.unsplash.com/flagged/photo-1557352041-0ed68833fbac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1076&q=80);
-  min-height: 300px;
+  min-height: 50vh;
 }
 
-.third-section {
-  background-image: url(https://images.unsplash.com/photo-1495603889488-42d1d66e5523?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80);
-  min-height: 300px;
+.gallery {
+  flex: 50%;
+  max-width: 50%;
 }
 
-footer {
-  padding: 1rem;
+.squareImage {
+  object-fit: cover;
+  width: 100%;
 }
 
 @media (max-width: 719px) {
-  .padding {
-    padding: 1rem;
-  }
-  .intro {
-    flex-direction: column;
+  a {
+    font-size: 1.5rem;
   }
   .selfie {
-    height: 20rem;
-    width: 100%;
+    height: 70%;
   }
-}
-
-@media (min-width: 720px) {
-  .padding {
-    padding: 3rem 3rem;
-  }
-  .intro {
-    flex-direction: row;
-  }
-  .selfie {
-    height: 10rem;
-    width: 10rem;
-    margin-left: 1rem;
+  .gallery {
+    flex: 100%;
+    max-width: 100%;
   }
 }
